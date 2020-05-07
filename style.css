@@ -1,0 +1,104 @@
+body {
+    font-family: 'courier', 'serif';
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+img {
+    height: auto;
+    width: 100%;
+    max-width: 50vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+
+div.content {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: 250px;
+    margin-top: 50px;
+    padding: 1px 20px; */
+}
+
+
+/* The side navigation menu */
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    /* font-weight: bold; */
+}
+
+
+/* Sidebar links */
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+/* Active/current link */
+
+.sidebar a.active {
+    color: #555;
+}
+
+
+/* Links on mouse-over */
+
+.sidebar a:hover:not(.active) {
+    color: #555;
+}
+
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 0;
+        /* 1px 10px; */
+        text-align: center;
+    }
+    .sidebaroptions {
+        margin: auto;
+        /* width: 400px; */
+        display: inline-block;
+    }
+    .sidebar a {
+        float: left;
+    }
+    div.content {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    iframe {
+        width: 100%;
+    }
+    img {
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
